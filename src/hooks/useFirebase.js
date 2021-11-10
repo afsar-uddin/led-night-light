@@ -54,6 +54,20 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
+    // LOGIN WITH GOOGLE
+    const signInWithGoogle = (location, history) => {
+        setIsLoading(true);
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                // userToDb(user.email, user.displayName, 'PUT');
+                setAuthError('');
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+            }).catch((error) => {
+                setAuthError(error.message);
+            }).finally(() => setIsLoading(false));
+    }
 
     // OBSERVE WHETHER USER STATE CHANGED OR NOT 
     useEffect(() => {
@@ -80,6 +94,7 @@ const useFirebase = () => {
         user,
         registerUser,
         loginUser,
+        signInWithGoogle,
         logOut,
         isLoading,
         authError

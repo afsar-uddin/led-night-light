@@ -3,6 +3,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Header from '../Shared/Header/Header';
 import './Login.css';
+import { FaGoogle } from 'react-icons/fa';
 
 
 const Login = () => {
@@ -37,6 +38,10 @@ const Login = () => {
                     <input type="submit" className="led-btn" value="Login" />
                 </form>
                 <p>Don't you have account? Register <Link className="link" to="/register">Here</Link></p>
+                <div className="google-login text-center">
+                    <span>Or</span>
+                    <button className="led-btn" onClick={handleGoogleLogin}><FaGoogle /> Google Login</button>
+                </div>
             </div>
         </>
     );

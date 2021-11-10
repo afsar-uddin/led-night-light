@@ -11,9 +11,9 @@ const Header = () => {
     return (
         <Navbar bg="light" expand="lg" className="led-header">
             <Container>
-                <Navbar.Brand href="#">
+                <NavLink to="/">
                     <img src={logo} alt="Logo" />
-                </Navbar.Brand>
+                </NavLink>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse className="justify-content-end" id="navbarScroll">
                     <Nav
