@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Products.css'
 
@@ -22,19 +22,20 @@ const Products = () => {
             </Row>
             <Row md={3} className="justify-content-center">
                 {
-                    products.slice(4).map(product => <Col
+                    products.slice(0, 6).map(product => <Col
                         id={product._id}
                         className="single-product"
                     >
-                        <div className="product-pic">
-                            <img src={product.cover} />
-                        </div>
-                        <div className="product-info">
-                            <h3>{product.title}</h3>
-                            <p>{product.shortDsc}</p>
-                            <Link to="/products-detail">View detail</Link>
-                        </div>
-
+                        <Card>
+                            <div className="product-pic">
+                                <img src={product.cover} />
+                            </div>
+                            <div className="product-info">
+                                <h3>{product.title}</h3>
+                                <p>{product.shortDsc}</p>
+                                <Link className="link-btn" to={`/product-detail/${product._id}`}>View detail</Link>
+                            </div>
+                        </Card>
                     </Col>)
                 }
             </Row>

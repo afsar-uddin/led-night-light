@@ -7,6 +7,10 @@ import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
 import Register from './Components/Login/Register';
 import AuthProvider from './context/AuthProvider';
+import Dashboard from './Components/Dashboard/Dashboard';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import ProductDetail from './Components/Home/Products/ProductDetail';
+import MyOrders from './Components/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -23,12 +27,24 @@ function App() {
               <Contact></Contact>
             </Route>
 
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+
+            <PrivateRoute path="/product-detail/:id">
+              <ProductDetail></ProductDetail>
+            </PrivateRoute>
+
             <Route path="/register">
               <Register></Register>
             </Route>
 
             <Route path="/login">
               <Login></Login>
+            </Route>
+
+            <Route path="/myorders">
+              <MyOrders></MyOrders>
             </Route>
 
             <Route path="*">

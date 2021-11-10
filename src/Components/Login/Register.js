@@ -32,10 +32,10 @@ const Register = () => {
             <div className="login-register bg-light">
                 <h2>Register here</h2>
                 <form onSubmit={handleUserSubmit}>
-                    <input type="text" onBlur={handleOnBlur} placeholder="Your name" name="name" />
-                    <input type="email" onBlur={handleOnBlur} placeholder="Your email" name="email" />
-                    <input type="password" onBlur={handleOnBlur} placeholder="Your password" name="password" />
-                    <input type="password" onBlur={handleOnBlur} placeholder="Confirm your password" name="password2" />
+                    <input type="text" onBlur={handleOnBlur} placeholder="Your name" name="name" required />
+                    <input type="email" onBlur={handleOnBlur} placeholder="Your email" name="email" required />
+                    <input type="password" onBlur={handleOnBlur} placeholder="Your password" name="password" required />
+                    <input type="password" onBlur={handleOnBlur} placeholder="Confirm your password" name="password2" required />
                     <input type="submit" className="led-btn" value="Register" />
                 </form>
                 <p>Already have account? Login <Link className="link" to="/login">Here</Link></p>

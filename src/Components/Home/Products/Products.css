@@ -11,6 +11,7 @@
     font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
+    margin-bottom: 30px;
 }
 
 .product-info p {
@@ -19,10 +20,12 @@
 
 .product-info {
     position: absolute;
-    bottom: -94px;
+    bottom: -165px;
     padding: 0 15px;
     color: #fff;
     transition: all 0.4s;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 15px;
 }
 
 .product-pic img {

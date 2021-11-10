@@ -33,8 +33,8 @@ const Login = () => {
             <div className="login-register bg-light">
                 <h2>Login here</h2>
                 <form onSubmit={handleUserSubmit}>
-                    <input type="email" onChange={handleOnChange} placeholder="Your email" name="email" />
-                    <input type="password" onChange={handleOnChange} placeholder="Your password" name="password" />
+                    <input type="email" onChange={handleOnChange} placeholder="Your email" name="email" required />
+                    <input type="password" onChange={handleOnChange} placeholder="Your password" name="password" required />
                     <input type="submit" className="led-btn" value="Login" />
                 </form>
                 <p>Don't you have account? Register <Link className="link" to="/register">Here</Link></p>

@@ -23,8 +23,8 @@ const Header = () => {
                     >
                         <NavLink activeClassName="active" exact to="/">Home</NavLink>
                         <NavLink activeClassName="active" exact to="/contact">Get in touch</NavLink>
+                        <NavLink activeClassName="active" exact to="/dashboard">Dashboard</NavLink>
                         <span>{user?.email && user?.displayName}</span>{user?.email ? <button onClick={logOut}>Logout</button> : <NavLink activeClassName="active" exact to="/login">Login / Register</NavLink>}
-
                     </Nav>
                 </Navbar.Collapse>
             </Container>
