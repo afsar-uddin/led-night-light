@@ -1,6 +1,10 @@
 .lead-header {
     box-shadow: rgb(0 0 0 / 8%) 0px 25px 20px -20px;
 }
+.led-header .navbar-nav {
+    display: flex;
+    align-items: center;
+}
 .led-header .navbar-nav a {
     margin: 0 10px;
 }

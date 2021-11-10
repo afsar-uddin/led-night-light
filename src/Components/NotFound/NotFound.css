@@ -1,0 +1,19 @@
+.not-found {
+    max-width: 470px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.not-found h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.not-found h4 a {
+    display: block;
+    margin-top: 32px;
+}

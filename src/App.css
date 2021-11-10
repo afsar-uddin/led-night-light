@@ -49,3 +49,24 @@ body {
 .led-header .navbar-nav a:hover {
   color: #fff;
 }
+
+/* BUTTON */
+.led-btn {
+  background-color: #D0C673;
+  border: none !important;
+  outline: none;
+  font-weight: 800;
+  font-size: 24px;
+  transition: all 0.4s;
+}
+
+.led-btn:hover {
+  background-color: #938832;
+  color: #fff;
+}
+.link {
+  font-weight: 800;
+}
+.link, .link:hover {
+  color: #524c17;
+}
