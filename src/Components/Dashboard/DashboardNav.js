@@ -30,7 +30,7 @@ const DashboardNav = () => {
                         >
                             <NavLink activeClassName="active" exact to="/">Home</NavLink>
                             <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
-                            <NavLink activeClassName="active" exact to="/my-orders">My Orders</NavLink>
+                            <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
                             <NavLink activeClassName="active" exact to="/review">Review</NavLink>
                             <span>{user?.email && user.displayName} {user?.email && <button onClick={logOut}>Logout</button>}</span>
                         </Nav>
