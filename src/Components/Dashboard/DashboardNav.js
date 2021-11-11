@@ -33,6 +33,7 @@ const DashboardNav = () => {
                             <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
                             <NavLink activeClassName="active" exact to="/review">Review</NavLink>
                             <NavLink activeClassName="active" exact to="/manage-all-orders">Manage all orders</NavLink>
+                            <NavLink activeClassName="active" exact to="/add-new-product">Add new product</NavLink>
                             <span>{user?.email && user?.displayName} {user?.email && <button onClick={logOut}>Logout</button>}</span>
                         </Nav>
                     </Navbar.Collapse>

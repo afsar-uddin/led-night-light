@@ -12,6 +12,7 @@
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 30px;
+    height: 45px;
 }
 
 .product-info p {
@@ -20,6 +21,7 @@
 
 .product-info {
     position: absolute;
+    width: 100%;
     bottom: -165px;
     padding: 0 15px;
     color: #fff;

@@ -13,6 +13,8 @@ import ProductDetail from './Components/Home/Products/ProductDetail';
 import MyOrders from './Components/MyOrders/MyOrders';
 import AllProducts from './Components/AllProducts/AllProducts';
 import ManageAllOrders from './Components/Dashboard/Admin/ManageAllOrders';
+import UpdateStatus from './Components/Dashboard/Admin/UpdateStatus';
+import AddNewProduct from './Components/Dashboard/Admin/AddNewProduct';
 
 function App() {
   return (
@@ -55,6 +57,14 @@ function App() {
 
             <Route path="/manage-all-orders">
               <ManageAllOrders></ManageAllOrders>
+            </Route>
+
+            <Route path="/order/update/:id">
+              <UpdateStatus></UpdateStatus>
+            </Route>
+
+            <Route path="/add-new-product">
+              <AddNewProduct></AddNewProduct>
             </Route>
 
             <Route path="*">

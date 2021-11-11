@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState();
 
     useEffect(() => {
-        const url = `http://localhost:4000/myorders?email=${user?.email}`;
+        const url = `http://localhost:4000/orders`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -20,7 +20,7 @@ const MyOrders = () => {
     const handleRemoveOrder = id => {
         const proceed = window.confirm("Are you sure delete the order?");
         if (proceed) {
-            const url = `http://localhost:4000/myorders/${id}`;
+            const url = `http://localhost:4000/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -49,9 +49,9 @@ const MyOrders = () => {
             </div>
 
             <Container className="orderd-product">
-                <Row md={3}>
+                <Row md={3} className="justify-content-center">
                     {
-                        orders?.map(order => <Col
+                        orders?.map(order => order?.email === user?.email && <Col
                             key={order._id}
                         ><Card>
                                 <div className="ordered-product">

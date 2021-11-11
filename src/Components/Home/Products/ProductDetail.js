@@ -24,7 +24,7 @@ const ProductDetail = () => {
         const email = user.email;
         const status = orderStatus;
         const orderedProduct = { title: productName, cover, email, status };
-        fetch('http://localhost:4000/myorders', {
+        fetch('http://localhost:4000/orders', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const ProductDetail = () => {
                             <img src={productDetail.cover} />
                             <h3>{productDetail.title}</h3>
                             <p>{productDetail.dsc}</p>
-                            <p>Price: $99.99</p>
+                            {productDetail.price && <p>Price: $ {productDetail.price}</p>}
                             <button onClick={proceedToOrder} className="led-btn">Purchase Now</button>
                         </Card>
                     </Col>
