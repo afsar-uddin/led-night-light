@@ -1,0 +1,54 @@
+.page-title {
+    text-transform: uppercase;
+    background-color: #D0C673;
+    padding: 30px 15px;
+}
+
+.page-title h2 {
+    font-weight: 700;
+}
+
+.ordered-product {
+    position: relative;
+}
+
+.ordered-product h3 {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.ordered-product img {
+    width: 100%;
+}
+
+.btn-status {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.btn-status button {
+    border: none;
+    background-color: #D0C673;
+    padding: 10px 30px;
+    margin-left: -15px;
+    font-weight: 600;
+}
+
+.btn-status span {
+    color: #504b22;
+    font-weight: 800;
+}
+
+.orderd-product .col {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

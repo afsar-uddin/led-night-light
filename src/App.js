@@ -11,6 +11,8 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import ProductDetail from './Components/Home/Products/ProductDetail';
 import MyOrders from './Components/MyOrders/MyOrders';
+import AllProducts from './Components/AllProducts/AllProducts';
+import ManageAllOrders from './Components/Dashboard/Admin/ManageAllOrders';
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
 
             <Route exact path="/">
               <Home></Home>
+            </Route>
+
+            <Route path="/all-products">
+              <AllProducts></AllProducts>
             </Route>
 
             <Route path="/contact">
@@ -45,6 +51,10 @@ function App() {
 
             <Route path="/myorders">
               <MyOrders></MyOrders>
+            </Route>
+
+            <Route path="/manage-all-orders">
+              <ManageAllOrders></ManageAllOrders>
             </Route>
 
             <Route path="*">

@@ -12,7 +12,7 @@ const DashboardNav = () => {
             <Container fluid className="dashboard-head bg-light">
                 <Row>
                     <Col>
-                        <h2>Dashboard of {user.displayName}</h2>
+                        <h2>Dashboard of {user?.displayName}</h2>
                     </Col>
                 </Row>
             </Container>
@@ -32,7 +32,8 @@ const DashboardNav = () => {
                             <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
                             <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
                             <NavLink activeClassName="active" exact to="/review">Review</NavLink>
-                            <span>{user?.email && user.displayName} {user?.email && <button onClick={logOut}>Logout</button>}</span>
+                            <NavLink activeClassName="active" exact to="/manage-all-orders">Manage all orders</NavLink>
+                            <span>{user?.email && user?.displayName} {user?.email && <button onClick={logOut}>Logout</button>}</span>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
