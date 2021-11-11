@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import DashboardNav from './DashboardNav';
 import Rating from 'react-rating';
-import './Reviews.css';
 
-
-// const Rating = require('react-rating');
-const Reviews = () => {
-
+const RivewsDashboard = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('http://localhost:4000/reviews')
@@ -16,7 +13,8 @@ const Reviews = () => {
 
     return (
         <div>
-            <div className="sec-title">
+            <DashboardNav></DashboardNav>
+            <div className="page-title">
                 <h2>Review</h2>
             </div>
             <Container>
@@ -41,4 +39,4 @@ const Reviews = () => {
     );
 };
 
-export default Reviews;
+export default RivewsDashboard;

@@ -31,7 +31,7 @@ const DashboardNav = () => {
                             <NavLink activeClassName="active" exact to="/">Home</NavLink>
                             <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
                             <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
-                            <NavLink activeClassName="active" exact to="/review">Review</NavLink>
+                            <NavLink activeClassName="active" exact to="/reviews">Review</NavLink>
                             <NavLink activeClassName="active" exact to="/manage-all-orders">Manage all orders</NavLink>
                             <NavLink activeClassName="active" exact to="/add-new-product">Add new product</NavLink>
                             <NavLink activeClassName="active" exact to="/add-new-review">Add new Review</NavLink>

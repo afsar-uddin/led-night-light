@@ -1,0 +1,17 @@
+.getintouch {
+    background-color: #918A50;
+    padding: 60px 0;
+    color: #fff;
+}
+
+.getintouch .col-md-8 {
+    text-align: left;
+}
+
+.contact-icon  svg {
+    font-size: 110px;
+}
+
+.contact-icon {
+    text-align: center;
+}

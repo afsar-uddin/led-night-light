@@ -16,6 +16,8 @@ import ManageAllOrders from './Components/Dashboard/Admin/ManageAllOrders';
 import UpdateStatus from './Components/Dashboard/Admin/UpdateStatus';
 import AddNewProduct from './Components/Dashboard/Admin/AddNewProduct';
 import AddNewReview from './Components/Dashboard/Admin/AddNewReview';
+import RivewsDashboard from './Components/Dashboard/RivewsDashboard';
+import Payment from './Components/Dashboard/Payment';
 
 function App() {
   return (
@@ -56,8 +58,16 @@ function App() {
               <MyOrders></MyOrders>
             </Route>
 
+            <Route path="/payment">
+              <Payment></Payment>
+            </Route>
+
             <Route path="/manage-all-orders">
               <ManageAllOrders></ManageAllOrders>
+            </Route>
+
+            <Route path="/reviews">
+              <RivewsDashboard></RivewsDashboard>
             </Route>
 
             <Route path="/order/update/:id">

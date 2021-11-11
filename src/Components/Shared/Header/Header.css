@@ -11,10 +11,15 @@
 .led-header .navbar-nav a:last-child {
     margin-right: 0;
 }
-.led-header .navbar-nav a:after {
+.led-header .navbar-nav a:after,
+.led-header .navbar-nav a.active:after {
     width: 100%;
     height: 0;
 }
-.led-header .navbar-nav a:hover:after {
+.led-header .navbar-nav a:hover:after,
+.led-header .navbar-nav a.active:after {
     height: 100%;
+}
+.led-header .navbar-nav a.active {
+    color: #fff;
 }
