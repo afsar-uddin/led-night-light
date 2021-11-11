@@ -34,6 +34,7 @@ const DashboardNav = () => {
                             <NavLink activeClassName="active" exact to="/review">Review</NavLink>
                             <NavLink activeClassName="active" exact to="/manage-all-orders">Manage all orders</NavLink>
                             <NavLink activeClassName="active" exact to="/add-new-product">Add new product</NavLink>
+                            <NavLink activeClassName="active" exact to="/add-new-review">Add new Review</NavLink>
                             <span>{user?.email && user?.displayName} {user?.email && <button onClick={logOut}>Logout</button>}</span>
                         </Nav>
                     </Navbar.Collapse>

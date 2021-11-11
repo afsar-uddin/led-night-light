@@ -1,0 +1,21 @@
+.single-review.col {
+    margin-bottom: 15px;
+}
+.single-review.col .card {
+    padding: 15px;
+}
+
+.single-review.col .card h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.single-review.col .card {
+    height: 100%;
+}
+.single-review.col span.fas.fa-star {
+    color: #fde83d;
+}
+.single-review.col span.fa-star {
+    font-size: 24px;
+}

@@ -8,6 +8,9 @@
 .page-title h2 {
     font-weight: 700;
 }
+.page-title .link-btn {
+    border: 1px solid #918A50;
+}
 
 .ordered-product {
     position: relative;

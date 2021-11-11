@@ -15,6 +15,7 @@ import AllProducts from './Components/AllProducts/AllProducts';
 import ManageAllOrders from './Components/Dashboard/Admin/ManageAllOrders';
 import UpdateStatus from './Components/Dashboard/Admin/UpdateStatus';
 import AddNewProduct from './Components/Dashboard/Admin/AddNewProduct';
+import AddNewReview from './Components/Dashboard/Admin/AddNewReview';
 
 function App() {
   return (
@@ -65,6 +66,10 @@ function App() {
 
             <Route path="/add-new-product">
               <AddNewProduct></AddNewProduct>
+            </Route>
+
+            <Route path="/add-new-review">
+              <AddNewReview></AddNewReview>
             </Route>
 
             <Route path="*">

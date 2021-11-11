@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Admin.css'
 
 const AddNewProduct = () => {
@@ -40,6 +41,7 @@ const AddNewProduct = () => {
         <>
             <div className="page-title">
                 <h2>Add your product</h2>
+                <Link className="link-btn" to="/dashboard">Back to dashboard</Link>
             </div>
             <Container>
                 <Row>
@@ -51,7 +53,7 @@ const AddNewProduct = () => {
                                 <input type="text" ref={productImgUrlRef} placeholder="Product image url" required />
                                 <input type="text" ref={priceRef} placeholder="Product price" required />
                                 <textarea ref={productDetailRef} cols="20" rows="5" placeholder="Product description" required></textarea>
-                                <input className="primary-btn" type="submit" value="Add Product" />
+                                <input type="submit" value="Add Product" />
                             </form>
                         </div>
                     </Col>
