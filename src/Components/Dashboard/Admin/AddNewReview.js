@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import DashboardNav from '../DashboardNav';
 
 const AddNewReview = () => {
 
@@ -33,9 +34,9 @@ const AddNewReview = () => {
     }
     return (
         <>
+            <DashboardNav></DashboardNav>
             <div className="page-title">
-                <h2>Add your review</h2>
-                <Link className="link-btn" to="/dashboard">Back to dashboard</Link>
+                <h2>Add new review</h2>
             </div>
             <Container>
                 <Row>

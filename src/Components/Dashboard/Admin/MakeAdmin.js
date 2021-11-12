@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DashboardNav from '../DashboardNav';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -26,18 +25,17 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div>
-            <DashboardNav></DashboardNav>
+        <>
+            <div className="page-title">
+                <h2>Make an admin using email</h2>
+            </div>
             <div>
-                <div className="page-title">
-                    <h2>Make an admin</h2>
-                </div>
                 <form className="led-form" onSubmit={handleAdmin}>
                     <input type="email" onBlur={handleOnBlur} name="email" placeholder="Make admin" required />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
-        </div>
+        </>
     );
 };
 

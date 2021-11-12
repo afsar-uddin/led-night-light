@@ -11,8 +11,10 @@ body {
 /* COMMON STYLE */
 
 /* LINK BTN STYLE */
-.link-btn,
-.led-header .navbar-nav a {
+.link-btn, 
+.led-header .navbar-nav a, 
+.led-header .navbar-nav button,
+.dashboard-nav button {
   text-decoration: none;
   background-color: #D0C673;
   color: #313131;

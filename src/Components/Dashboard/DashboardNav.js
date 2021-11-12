@@ -12,14 +12,15 @@ import {
     useParams,
     useRouteMatch
 } from "react-router-dom";
-import Dashboard from './Dashboard';
 import ManageProducts from './ManageProducts';
 import AdminRoute from '../Login/AdminRoute/AdminRoute';
 import AddNewProduct from '../Dashboard/Admin/AddNewProduct';
 import MakeAdmin from '../Dashboard/Admin/MakeAdmin';
+import DashboardHome from './DashboardHome';
+import ManageAllOrders from './Admin/ManageAllOrders';
 
 const DashboardNav = () => {
-    let { path, url } = useRouteMatch();
+    const { path, url } = useRouteMatch();
     const { admin, user, logOut } = useAuth();
 
     return (
@@ -27,7 +28,7 @@ const DashboardNav = () => {
             <Container fluid className="dashboard-head bg-light">
                 <Row>
                     <Col>
-                        <h2>Dashboard of {user?.displayName}</h2>
+                        <h2>Dashboard of <span>{user?.displayName}</span></h2>
                     </Col>
                 </Row>
             </Container>
@@ -41,50 +42,56 @@ const DashboardNav = () => {
                                 </div>
                                 <div>
                                     {user?.email && <button onClick={logOut}>Logout</button>}
+                                    <Link to="/"><button>Back to home</button></Link>
                                 </div>
                             </NavLink>
                         </Col>
+                    </Row>
+                    <Row className="site-nav">
                         <Col>
-                            <Nav
-                                style={{ maxHeight: '100px' }}
-                                navbarScroll>
-                                <NavLink activeClassName="active" exact to="/">Home</NavLink>
-                                <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
-                                <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
-                                <NavLink activeClassName="active" exact to="/reviews">Review</NavLink>
-                                <NavLink activeClassName="active" exact to="/manage-all-orders">Manage all orders</NavLink>
-                                {/* <Link to={`${url}`}>Dashboard</Link> <br /> */}
-
+                            <Nav>
+                                <Link activeClassName="active" to={`${url}`}>Dashboard home</Link>
                                 {
-                                    admin && <span>
-                                        <NavLink to={`${url}/manage-products`} activeClassName="active" exact >Manage products</NavLink>
-                                        <NavLink to={`${url}/add-new-product`} activeClassName="active" exact to="/add-new-product">Add new product</NavLink>
-                                        <NavLink to={`${url}/make-admin`} activeClassName="active" exact to="/make-admin">Make admin</NavLink>
-                                    </span>
-                                }
+                                    admin ? <>
+                                        <Link activeClassName="active" to={`${url}/manageProducts`} >Manage products</Link>
 
-                                <NavLink activeClassName="active" exact to="/add-new-review">Add new Review</NavLink>
+                                        <Link activeClassName="active" to={`${url}/addNewProduct`} >Add new product</Link>
+
+                                        <NavLink activeClassName="active" to={`${url}/manageAllOrders`}>Manage all orders</NavLink>
+
+                                        <Link to={`${url}/makeAdmin`}>Make admin</Link>
+                                    </>
+                                        :
+                                        <>
+                                            <NavLink activeClassName="active" exact to="/">Home</NavLink>
+                                            <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
+                                            <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
+                                            <NavLink activeClassName="active" exact to="/reviews">Review</NavLink>
+
+                                            <NavLink activeClassName="active" exact to="/add-new-review">Add new Review</NavLink>
+                                        </>
+                                }
                             </Nav>
                         </Col>
                     </Row>
-                    {/* <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse className="justify-content-end" id="navbarScroll"> */}
-                    {/* </Navbar.Collapse> */}
                 </Container>
             </Navbar>
             <Switch>
-                {/* <Route exact path={path}>
-                        <Dashboard></Dashboard>
-                    </Route> */}
-                <AdminRoute path={`${path}/manage-products`}>
+                <Route exact path={path}>
+                    <DashboardHome></DashboardHome>
+                </Route>
+                <Route path={`${path}/manageProducts`}>
                     <ManageProducts></ManageProducts>
-                </AdminRoute>
-                <AdminRoute path={`${path}/add-new-product`}>
+                </Route>
+                <Route path={`${path}/addNewProduct`}>
                     <AddNewProduct></AddNewProduct>
-                </AdminRoute>
-                <AdminRoute path={`${path}/make-admin`}>
+                </Route>
+                <Route path={`${path}/manageAllOrders`}>
+                    <ManageAllOrders></ManageAllOrders>
+                </Route>
+                <Route path={`${path}/makeAdmin`}>
                     <MakeAdmin></MakeAdmin>
-                </AdminRoute>
+                </Route>
             </Switch>
         </>
     );

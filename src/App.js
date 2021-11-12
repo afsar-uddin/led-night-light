@@ -68,9 +68,9 @@ function App() {
               <ManageAllOrders></ManageAllOrders>
             </Route>
 
-            <Route path="/manage-products">
+            {/* <Route path="/manage-products">
               <ManageProducts></ManageProducts>
-            </Route>
+            </Route> */}
 
             <Route path="/reviews">
               <RivewsDashboard></RivewsDashboard>
@@ -80,17 +80,17 @@ function App() {
               <UpdateStatus></UpdateStatus>
             </Route>
 
-            <Route path="/add-new-product">
+            {/* <Route path="/add-new-product">
               <AddNewProduct></AddNewProduct>
-            </Route>
+            </Route> */}
 
             <Route path="/add-new-review">
               <AddNewReview></AddNewReview>
             </Route>
 
-            <Route path="/make-admin">
+            {/* <Route path="/make-admin">
               <MakeAdmin></MakeAdmin>
-            </Route>
+            </Route> */}
 
             <Route path="*">
               <NotFound></NotFound>

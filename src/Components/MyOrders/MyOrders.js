@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
-import DashboardNav from '../Dashboard/DashboardNav';
 import './MyOrders.css'
+import { Link } from 'react-router-dom';
+import DashboardNav from '../Dashboard/DashboardNav';
 
 const MyOrders = () => {
     const { user, isLoading } = useAuth();
@@ -36,18 +37,11 @@ const MyOrders = () => {
     };
 
     return (
-        <div>
+        <>
             <DashboardNav></DashboardNav>
             <div className="page-title">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h2>My all ordered products</h2>
-                        </Col>
-                    </Row>
-                </Container>
+                <h2>My ordered products</h2>
             </div>
-
             <Container className="orderd-product">
                 <Row md={3} className="justify-content-center">
                     {
@@ -66,7 +60,7 @@ const MyOrders = () => {
                         )}
                 </Row>
             </Container>
-        </div>
+        </>
     );
 };
 

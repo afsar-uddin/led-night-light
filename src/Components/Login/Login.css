@@ -40,3 +40,15 @@
     margin-right: 10px;
     margin-top: -5px;
 }
+.led-form input[type="submit"] {
+    background-color: #D0C673;
+    border-color: #D0C673;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.led-form input[type="submit"]:hover {
+    background-color: #7e7632;
+    color: #fff;
+}

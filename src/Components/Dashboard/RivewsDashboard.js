@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import DashboardNav from './DashboardNav';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 const RivewsDashboard = () => {
     const [reviews, setReviews] = useState([]);
@@ -15,7 +16,7 @@ const RivewsDashboard = () => {
         <div>
             <DashboardNav></DashboardNav>
             <div className="page-title">
-                <h2>Review</h2>
+                <h2>All reviews</h2>
             </div>
             <Container>
                 <Row md={3} className="justify-content-center">

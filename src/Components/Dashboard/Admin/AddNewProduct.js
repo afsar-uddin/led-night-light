@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './Admin.css'
 
 const AddNewProduct = () => {
@@ -40,8 +39,7 @@ const AddNewProduct = () => {
     return (
         <>
             <div className="page-title">
-                <h2>Add your product</h2>
-                <Link className="link-btn" to="/dashboard">Back to dashboard</Link>
+                <h2>Add new product</h2>
             </div>
             <Container>
                 <Row>

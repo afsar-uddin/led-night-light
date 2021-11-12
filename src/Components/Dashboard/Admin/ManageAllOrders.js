@@ -37,7 +37,9 @@ const ManageAllOrders = () => {
 
     return (
         <div>
-            <DashboardNav></DashboardNav>
+            <div className="page-title">
+                <h2>Manage orders</h2>
+            </div>
             <Container className="orderd-product">
                 <Row md={3} className="justify-content-center">
                     {

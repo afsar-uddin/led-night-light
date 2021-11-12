@@ -5,8 +5,12 @@
     display: flex;
     align-items: center;
 }
-.led-header .navbar-nav a {
+.led-header .navbar-nav a, .led-header .navbar-nav button,
+.dashboard-nav button {
     margin: 0 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
 }
 .led-header .navbar-nav a:last-child {
     margin-right: 0;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+// import DashboardNav from './DashboardNav';
 
 const ManageProducts = () => {
     const [manageProducts, setManageProducts] = useState([]);
@@ -31,33 +32,28 @@ const ManageProducts = () => {
     };
 
     return (
-        <div className="manage-products">
+        <>
             <div className="page-title">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h2>My all products</h2>
-                        </Col>
+                <h2>Manage products</h2>
+            </div>
+            <div className="manage-products">
+                <Container className="orderd-product">
+                    <Row md={3} className="justify-content-center">
+                        {
+                            manageProducts?.map(product => <Col
+                                key={product._id}
+                            ><Card>
+                                    <div className="ordered-product">
+                                        <img src={product?.cover} />
+                                        <h3>{product?.title}</h3>
+                                    </div>
+                                    <button onClick={() => handleRemoveProduct(product._id)}>Remove</button>
+                                </Card></Col>
+                            )}
                     </Row>
                 </Container>
             </div>
-
-            <Container className="orderd-product">
-                <Row md={3} className="justify-content-center">
-                    {
-                        manageProducts?.map(product => <Col
-                            key={product._id}
-                        ><Card>
-                                <div className="ordered-product">
-                                    <img src={product?.cover} />
-                                    <h3>{product?.title}</h3>
-                                </div>
-                                <button onClick={() => handleRemoveProduct(product._id)}>Remove</button>
-                            </Card></Col>
-                        )}
-                </Row>
-            </Container>
-        </div>
+        </>
     );
 };
 
