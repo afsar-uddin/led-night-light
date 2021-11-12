@@ -15,7 +15,7 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div>
+        <div className="reviews-wrapper">
             <div className="sec-title">
                 <h2>Review</h2>
             </div>
