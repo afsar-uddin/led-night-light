@@ -18,7 +18,7 @@ const AllProducts = () => {
                 <Row md="3" className="justify-content-center">
                     {
                         products.map(product => <Col
-                            id={product._id}
+                            key={product._id}
                             className="single-product"
                         >
                             <Card>

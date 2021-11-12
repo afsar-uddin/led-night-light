@@ -23,7 +23,7 @@ const Products = () => {
             <Row md={3} className="justify-content-center">
                 {
                     products.slice(0, 6).map(product => <Col
-                        id={product._id}
+                        key={product._id}
                         className="single-product"
                     >
                         <Card>

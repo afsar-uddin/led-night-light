@@ -20,7 +20,9 @@ const RivewsDashboard = () => {
             <Container>
                 <Row md={3} className="justify-content-center">
                     {
-                        reviews.map(review => <Col className="single-review">
+                        reviews.map(review => <Col className="single-review"
+                            key={review._id}
+                        >
                             <Card>
                                 <h3>{review.name}</h3>
                                 <p> {review.comments}</p>

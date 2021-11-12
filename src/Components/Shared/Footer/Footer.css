@@ -1,0 +1,33 @@
+.footer {
+    background-color: #D0C673;
+    padding: 40px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.social-nav a {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    background-color: #918A50;
+    border-radius: 50%;
+    margin: 0 7px;
+    color: #fff;
+}
+
+.social-nav a svg {
+    margin-top: -4px;
+    font-size: 15px;
+}
+
+.social-nav {
+    text-align: right;
+}
+.copyright {
+    text-align: left;
+}
