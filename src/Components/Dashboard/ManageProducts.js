@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import DashboardNav from './DashboardNav';
 
 const ManageProducts = () => {
     const [manageProducts, setManageProducts] = useState([]);
@@ -32,13 +31,12 @@ const ManageProducts = () => {
     };
 
     return (
-        <div>
-            <DashboardNav></DashboardNav>
+        <div className="manage-products">
             <div className="page-title">
                 <Container>
                     <Row>
                         <Col>
-                            <h2>My all product products</h2>
+                            <h2>My all products</h2>
                         </Col>
                     </Row>
                 </Container>

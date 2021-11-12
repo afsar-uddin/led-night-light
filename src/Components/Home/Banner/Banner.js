@@ -25,7 +25,7 @@ const Banner = () => {
                                         alt={bannerSlide.title}
                                     />
                                     <img
-                                        src={bannerSlide.cover}
+                                        src={bannerSlide.cover0}
                                         alt={bannerSlide.title}
                                     />
                                 </div>

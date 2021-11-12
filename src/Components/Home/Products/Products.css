@@ -37,3 +37,6 @@
 .single-product:hover .product-info {
     bottom: 0;
 }
+.product-pic img {
+    height: 350px;
+}

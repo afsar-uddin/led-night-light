@@ -71,21 +71,21 @@ const DashboardNav = () => {
                     <Navbar.Collapse className="justify-content-end" id="navbarScroll"> */}
                     {/* </Navbar.Collapse> */}
                 </Container>
-                <Switch>
-                    {/* <Route exact path={path}>
+            </Navbar>
+            <Switch>
+                {/* <Route exact path={path}>
                         <Dashboard></Dashboard>
                     </Route> */}
-                    <AdminRoute path={`${path}/manage-products`}>
-                        <ManageProducts></ManageProducts>
-                    </AdminRoute>
-                    <AdminRoute path={`${path}/add-new-product`}>
-                        <AddNewProduct></AddNewProduct>
-                    </AdminRoute>
-                    <AdminRoute path={`${path}/make-admin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </AdminRoute>
-                </Switch>
-            </Navbar>
+                <AdminRoute path={`${path}/manage-products`}>
+                    <ManageProducts></ManageProducts>
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-new-product`}>
+                    <AddNewProduct></AddNewProduct>
+                </AdminRoute>
+                <AdminRoute path={`${path}/make-admin`}>
+                    <MakeAdmin></MakeAdmin>
+                </AdminRoute>
+            </Switch>
         </>
     );
 };

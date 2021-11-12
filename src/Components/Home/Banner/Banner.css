@@ -48,3 +48,6 @@ span.carousel-control-prev-icon {
     z-index: -1;
     padding: 25px;
 }
+.banner-fig img {
+    height: 340px;
+}
