@@ -40,3 +40,12 @@
 .product-pic img {
     height: 350px;
 }
+
+.sec-title {
+    margin: 45px 0;
+}
+.sec-title h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+}

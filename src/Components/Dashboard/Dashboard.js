@@ -1,12 +1,20 @@
 import React from 'react';
 import DashboardNav from './DashboardNav';
-import { Container, Row, Col } from 'react-bootstrap';
+import Footer from '../Shared/Footer/Footer';
+import useAuth from '../../hooks/useAuth';
 
 const Dashboard = () => {
+    const { admin } = useAuth()
     return (
-        <div>
+        <>
             <DashboardNav></DashboardNav>
-        </div>
+            {admin ? '' :
+                <div className="dashboard-content">
+                    <h2>Dashbord content comming soon</h2>
+                </div>
+            }
+            <Footer></Footer>
+        </>
     );
 };
 

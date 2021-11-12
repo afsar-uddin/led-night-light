@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Shared/Header/Header';
+import Footer from '../../Components/Shared/Footer/Footer'
 
 const Contact = () => {
     return (
@@ -15,8 +16,8 @@ const Contact = () => {
                     <textarea cols="20" rows="5" placeholder="Your comment" required></textarea>
                     <input type="submit" value="Submit" />
                 </form>
-
             </div>
+            <Footer></Footer>
         </div>
     );
 };

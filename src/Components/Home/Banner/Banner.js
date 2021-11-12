@@ -32,7 +32,7 @@ const Banner = () => {
                                 <Carousel.Caption>
                                     <h3>{bannerSlide.title}</h3>
                                     <p>{bannerSlide.shortDsc}</p>
-                                    <Link className="link-btn" to="/allProducts">View Products</Link>
+                                    <Link className="link-btn" to="/all-products">View Products</Link>
                                 </Carousel.Caption>
                             </div>
                         </Carousel.Item>)

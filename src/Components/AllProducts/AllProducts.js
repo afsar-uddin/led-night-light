@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 
 const AllProducts = () => {
@@ -14,6 +15,9 @@ const AllProducts = () => {
     return (
         <div>
             <Header></Header>
+            <div className="page-title">
+                <h2>All Products</h2>
+            </div>
             <Container>
                 <Row md="3" className="justify-content-center">
                     {
@@ -35,6 +39,7 @@ const AllProducts = () => {
                     }
                 </Row>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };

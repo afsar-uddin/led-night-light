@@ -1,8 +1,10 @@
 .led-form {
     max-width: 500px;
-    margin: 60px auto;
+    margin: 30px auto;
     padding: 30px;
     border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #F8F9FA;
 }
 
 .led-form input, .led-form textarea {

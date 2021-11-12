@@ -46,6 +46,7 @@
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.4s;
+    margin-bottom: 0;
 }
 
 .led-form input[type="submit"]:hover {

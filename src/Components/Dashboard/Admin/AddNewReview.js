@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer';
 import DashboardNav from '../DashboardNav';
 
 const AddNewReview = () => {
@@ -52,6 +53,7 @@ const AddNewReview = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer></Footer>
         </>
     );
 };

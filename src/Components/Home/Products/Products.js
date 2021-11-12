@@ -15,7 +15,7 @@ const Products = () => {
         <Container className="products-wrapper">
             <Row>
                 <Col>
-                    <div className="led-title">
+                    <div className="sec-title">
                         <h2>Our products</h2>
                     </div>
                 </Col>

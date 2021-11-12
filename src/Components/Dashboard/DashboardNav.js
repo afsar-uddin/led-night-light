@@ -50,20 +50,18 @@ const DashboardNav = () => {
                     <Row className="site-nav">
                         <Col>
                             <Nav>
-                                <Link activeClassName="active" to={`${url}`}>Dashboard home</Link>
                                 {
                                     admin ? <>
-                                        <Link activeClassName="active" to={`${url}/manageProducts`} >Manage products</Link>
+                                        <NavLink activeClassName="active" to={`${url}/manageProducts`} >Manage products</NavLink>
 
-                                        <Link activeClassName="active" to={`${url}/addNewProduct`} >Add new product</Link>
+                                        <NavLink activeClassName="active" to={`${url}/addNewProduct`} >Add new product</NavLink>
 
                                         <NavLink activeClassName="active" to={`${url}/manageAllOrders`}>Manage all orders</NavLink>
 
-                                        <Link to={`${url}/makeAdmin`}>Make admin</Link>
+                                        <NavLink activeClassName="active" to={`${url}/makeAdmin`}>Make admin</NavLink>
                                     </>
                                         :
                                         <>
-                                            <NavLink activeClassName="active" exact to="/">Home</NavLink>
                                             <NavLink activeClassName="active" exact to="/payment">Pay</NavLink>
                                             <NavLink activeClassName="active" exact to="/myorders">My Orders</NavLink>
                                             <NavLink activeClassName="active" exact to="/reviews">Review</NavLink>
@@ -77,21 +75,23 @@ const DashboardNav = () => {
                 </Container>
             </Navbar>
             <Switch>
-                <Route exact path={path}>
-                    <DashboardHome></DashboardHome>
-                </Route>
-                <Route path={`${path}/manageProducts`}>
+                {admin &&
+                    <Route exact path={path}>
+                        <DashboardHome></DashboardHome>
+                    </Route>
+                }
+                <AdminRoute path={`${path}/manageProducts`}>
                     <ManageProducts></ManageProducts>
-                </Route>
-                <Route path={`${path}/addNewProduct`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/addNewProduct`}>
                     <AddNewProduct></AddNewProduct>
-                </Route>
-                <Route path={`${path}/manageAllOrders`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/manageAllOrders`}>
                     <ManageAllOrders></ManageAllOrders>
-                </Route>
-                <Route path={`${path}/makeAdmin`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/makeAdmin`}>
                     <MakeAdmin></MakeAdmin>
-                </Route>
+                </AdminRoute>
             </Switch>
         </>
     );

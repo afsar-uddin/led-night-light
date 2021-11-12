@@ -3,6 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import DashboardNav from './DashboardNav';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 const RivewsDashboard = () => {
     const [reviews, setReviews] = useState([]);
@@ -38,6 +39,7 @@ const RivewsDashboard = () => {
                     }
                 </Row>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };
