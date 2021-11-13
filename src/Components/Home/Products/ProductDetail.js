@@ -42,21 +42,27 @@ const ProductDetail = () => {
             <Header></Header>
             <Container>
                 <Row>
-                    <Col md={8}>
+                    <Col lg={8} md={12}>
                         <Card className="product-detail">
                             <h2>Product Information</h2>
                             <img src={productDetail.cover} alt={productDetail.title} />
                             <h3>{productDetail.title}</h3>
+                            <p className="price">Price: $ {productDetail.price}</p>
                             <p>{productDetail.dsc}</p>
-                            {productDetail.price && <p>Price: $ {productDetail.price}</p>}
-                            <button onClick={proceedToOrder} className="led-btn">Purchase Now</button>
                         </Card>
                     </Col>
-                    <Col md={4}>
+                    <Col lg={4} md={12}>
                         <Card>
                             <h2>User Information</h2>
-                            <h3>{user.displayName}</h3>
-                            <p>{user.email}</p>
+                            <div className="shipping-info">
+                                <form className="led-form">
+                                    <input type="text" name="name" value={user?.displayName} />
+                                    <input type="email" name="name" value={user?.email} />
+                                    <input type="text" name="phonenumber" placeholder="Your phone number" />
+                                    <textarea name="address" cols="15" rows="5" placeholder="Shipping address"></textarea>
+                                </form>
+                                <button onClick={proceedToOrder} className="led-btn">Purchase Now</button>
+                            </div>
                         </Card>
                     </Col>
                 </Row>

@@ -65,6 +65,17 @@
     margin-bottom: 30px;
 }
 
-.product-detail-wrapper .card p:last-child {
+.product-detail-wrapper .card p.price {
     font-size: 30px;
+    font-weight: 600;
+}
+
+.shipping-info form {
+    margin-bottom: 0;
+}
+
+.shipping-info button {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 5px;
 }

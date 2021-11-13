@@ -42,7 +42,7 @@ const MyOrders = () => {
             <div className="page-title">
                 <h2>My ordered products</h2>
             </div>
-            <Container className="orderd-product">
+            <Container className="orderd-product user-ordered-products">
                 <Row className="justify-content-center">
                     {
                         orders?.map(order => order?.email === user?.email && <Col lg={4} md={6} xs={12}
