@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     const handleAdmin = e => {
         e.preventDefault();
         const user = { email };
-        fetch('http://localhost:4000/users/admin', {
+        fetch('https://floating-inlet-09206.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

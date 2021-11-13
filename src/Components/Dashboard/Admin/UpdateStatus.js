@@ -7,7 +7,7 @@ const UpdateStatus = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:4000/orders/${id}`;
+        const url = `https://floating-inlet-09206.herokuapp.com/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setStetus(data))
@@ -19,7 +19,7 @@ const UpdateStatus = () => {
     };
 
     const handleUpadeStatus = e => {
-        const url = `http://localhost:4000/orders/${id}`;
+        const url = `https://floating-inlet-09206.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

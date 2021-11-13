@@ -10,7 +10,7 @@ const AllProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://floating-inlet-09206.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
@@ -24,9 +24,9 @@ const AllProducts = () => {
                 <h2>All Products</h2>
             </div>
             <Container>
-                <Row md="3" className="justify-content-center">
+                <Row className="justify-content-center">
                     {
-                        products.map(product => <Col
+                        products.map(product => <Col lg={4} md={6} xs={12}
                             key={product._id}
                             className="single-product"
                         >

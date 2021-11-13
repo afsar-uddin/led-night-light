@@ -7,7 +7,7 @@ import Footer from '../Shared/Footer/Footer';
 const RivewsDashboard = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/reviews')
+        fetch('https://floating-inlet-09206.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -18,10 +18,10 @@ const RivewsDashboard = () => {
             <div className="page-title">
                 <h2>All reviews</h2>
             </div>
-            <Container>
-                <Row md={3} className="justify-content-center">
+            <Container className="reviews-wrapper">
+                <Row className="justify-content-center">
                     {
-                        reviews.map(review => <Col className="single-review"
+                        reviews.map(review => <Col className="single-review col-lg-4 col-md-6 col-xs-12"
                             key={review._id}
                         >
                             <Card>

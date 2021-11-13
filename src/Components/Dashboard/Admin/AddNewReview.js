@@ -18,7 +18,7 @@ const AddNewReview = () => {
         const rating = reviewerRating.current.value;
         const newProduct = { name, comments, rating };
 
-        fetch('http://localhost:4000/reviews', {
+        fetch('https://floating-inlet-09206.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

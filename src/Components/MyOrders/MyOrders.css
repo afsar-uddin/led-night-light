@@ -55,7 +55,6 @@
 
 .orderd-product .col {
     margin-bottom: 30px;
-    margin-top: 30px;
 }
 .update-btn button,
 .manage-products button {
@@ -98,4 +97,8 @@
 .status-wrapper input[type="submit"] {
     background: #D0C673;
     font-weight: 600;
+}
+.orderd-product {
+    margin-top: 60px;
+    margin-bottom: 30px;
 }

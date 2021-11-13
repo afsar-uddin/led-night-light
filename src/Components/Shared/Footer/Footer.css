@@ -31,3 +31,13 @@
 .copyright {
     text-align: left;
 }
+@media screen and (max-width: 800px) {
+    .footer .col {
+        width: 100%;
+        flex: inherit;
+        text-align: center;
+    }
+    .copyright p {
+        margin-bottom: 15px;
+    }
+}

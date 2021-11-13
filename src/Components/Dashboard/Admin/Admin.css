@@ -15,3 +15,9 @@
     border-radius: 5px;
     outline: none;
 }
+.add-new-product form.led-form {
+    margin-bottom: 60px;
+}
+.manage-orders .card {
+    margin-bottom: 30px;
+}

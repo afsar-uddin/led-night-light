@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [manageProducts, setManageProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://floating-inlet-09206.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setManageProducts(data);
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const handleRemoveProduct = id => {
         const proceed = window.confirm("Are you sure delete the product?");
         if (proceed) {
-            const url = `http://localhost:4000/products/${id}`;
+            const url = `https://floating-inlet-09206.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -38,9 +38,9 @@ const ManageProducts = () => {
             </div>
             <div className="manage-products">
                 <Container className="orderd-product">
-                    <Row md={3} className="justify-content-center">
+                    <Row className="justify-content-center">
                         {
-                            manageProducts?.map(product => <Col
+                            manageProducts?.map(product => <Col lg={4} md={6} xs={12}
                                 key={product._id}
                             ><Card>
                                     <div className="ordered-product">

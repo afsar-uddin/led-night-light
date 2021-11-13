@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState();
 
     useEffect(() => {
-        const url = `http://localhost:4000/orders`;
+        const url = `https://floating-inlet-09206.herokuapp.com/orders`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleRemoveOrder = id => {
         const proceed = window.confirm("Are you sure delete the order?");
         if (proceed) {
-            const url = `http://localhost:4000/orders/${id}`;
+            const url = `https://floating-inlet-09206.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -43,9 +43,9 @@ const MyOrders = () => {
                 <h2>My ordered products</h2>
             </div>
             <Container className="orderd-product">
-                <Row md={3} className="justify-content-center">
+                <Row className="justify-content-center">
                     {
-                        orders?.map(order => order?.email === user?.email && <Col
+                        orders?.map(order => order?.email === user?.email && <Col lg={4} md={6} xs={12}
                             key={order._id}
                         ><Card>
                                 <div className="ordered-product">

@@ -52,13 +52,15 @@ const DashboardNav = () => {
                             <Nav>
                                 {
                                     admin ? <>
-                                        <NavLink activeClassName="active" to={`${url}/manageProducts`} >Manage products</NavLink>
+                                        <NavLink activeClassName="active" to={`${url}/manageAllOrders`}>Manage all orders</NavLink>
 
                                         <NavLink activeClassName="active" to={`${url}/addNewProduct`} >Add new product</NavLink>
 
-                                        <NavLink activeClassName="active" to={`${url}/manageAllOrders`}>Manage all orders</NavLink>
+                                        <NavLink activeClassName="active" to={`${url}/manageProducts`} >Manage products</NavLink>
 
                                         <NavLink activeClassName="active" to={`${url}/makeAdmin`}>Make admin</NavLink>
+
+
                                     </>
                                         :
                                         <>

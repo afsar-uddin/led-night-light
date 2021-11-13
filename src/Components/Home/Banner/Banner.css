@@ -51,3 +51,21 @@ span.carousel-control-prev-icon {
 .banner-fig img {
     height: 340px;
 }
+@media screen and (max-width: 990px) {
+    .single-slide .banner-fig img:last-child {
+        display: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    .banner-slide {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+    .banner-fig, .banner-fig img {
+        width: 100% !important;
+    }
+}

@@ -43,7 +43,7 @@ const useFirebase = () => {
     // SAVE USER TO DATABASE
     const userToDb = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:4000/users', {
+        fetch('https://floating-inlet-09206.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -96,7 +96,7 @@ const useFirebase = () => {
 
     // ADMIN DATA LOAD
     useEffect(() => {
-        fetch(`http://localhost:4000/users/${user?.email}`)
+        fetch(`https://floating-inlet-09206.herokuapp.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

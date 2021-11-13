@@ -20,7 +20,7 @@ const AddNewProduct = () => {
         const price = priceRef.current.value;
         const newProduct = { title, shortDsc, cover, dsc, price };
 
-        fetch('http://localhost:4000/products', {
+        fetch('https://floating-inlet-09206.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

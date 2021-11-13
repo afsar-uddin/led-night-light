@@ -22,3 +22,8 @@
 .reviews-wrapper {
     margin-bottom: 45px;
 }
+@media screen and (max-width: 800px) {
+    .single-review.col {
+        flex: inherit
+    }
+}

@@ -27,6 +27,35 @@
 .led-header .navbar-nav a.active {
     color: #fff;
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 990px) {
+    .led-header .navbar-collapse {
+        min-height: 250px;
+        width: 100%;
+    }
+    .led-header .navbar-collapse a,
+    .dashboard-nav .navbar-nav a {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    .led-header .navbar-nav span {
+        display: block;
+        margin: 5px 0;
+    }
+    .navbar-nav a {
+        width: 100%;
+        margin: 5px 0 !important;
+    }
     
+    .dashboard-nav.navbar .container .row {
+        width: 100%;
+        margin-bottom: 15px !important;
+    }
+    
+    .dashboard-content {
+        margin: 30px 0;
+    }
+    .dashboard-nav.navbar .container .row .col a {
+        display: inline-block;
+    }
 }

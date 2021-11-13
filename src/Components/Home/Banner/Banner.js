@@ -6,12 +6,12 @@ import './Banner.css'
 const Banner = () => {
     const [bannerSlides, setBannerSlides] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/banner')
+        fetch('https://floating-inlet-09206.herokuapp.com/banner')
             .then(res => res.json())
             .then(data => setBannerSlides(data))
     }, []);
     return (
-        <Container>
+        <Container className="banner-slide">
             <Row>
                 <Carousel>
                     {

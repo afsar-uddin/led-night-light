@@ -12,7 +12,7 @@ const ProductDetail = () => {
     const [orderStatus, setOrderStatus] = useState('pending');
 
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${id}`)
+        fetch(`https://floating-inlet-09206.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProductDetail(data))
     }, [id]);
@@ -24,7 +24,7 @@ const ProductDetail = () => {
         const email = user.email;
         const status = orderStatus;
         const orderedProduct = { title: productName, cover, email, status };
-        fetch('http://localhost:4000/orders', {
+        fetch('https://floating-inlet-09206.herokuapp.com/orders', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const ProductDetail = () => {
             })
     }
     return (
-        <div>
+        <div className="product-detail-wrapper">
             <Header></Header>
             <Container>
                 <Row>

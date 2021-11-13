@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState();
 
     useEffect(() => {
-        const url = `http://localhost:4000/orders`;
+        const url = `https://floating-inlet-09206.herokuapp.com/orders`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
     const handleRemoveOrder = id => {
         const proceed = window.confirm("Are you sure delete the order?");
         if (proceed) {
-            const url = `http://localhost:4000/orders/${id}`;
+            const url = `https://floating-inlet-09206.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -39,10 +39,10 @@ const ManageAllOrders = () => {
             <div className="page-title">
                 <h2>Manage orders</h2>
             </div>
-            <Container className="orderd-product">
-                <Row md={3} className="justify-content-center">
+            <Container className="orderd-product manage-orders">
+                <Row className="justify-content-center">
                     {
-                        orders?.map(order => <Col
+                        orders?.map(order => <Col lg={4} md={6} xs={12}
                             key={order._id}
                         ><Card>
                                 <div className="ordered-product">
