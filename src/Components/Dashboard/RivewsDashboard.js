@@ -3,6 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import DashboardNav from './DashboardNav';
 import Rating from 'react-rating';
 import Footer from '../Shared/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const RivewsDashboard = () => {
     const [reviews, setReviews] = useState([]);
@@ -17,6 +18,7 @@ const RivewsDashboard = () => {
             <DashboardNav></DashboardNav>
             <div className="page-title">
                 <h2>All reviews</h2>
+                <Link to="/add-new-review" className="link-btn">Add your review here</Link>
             </div>
             <Container className="reviews-wrapper">
                 <Row className="justify-content-center">
