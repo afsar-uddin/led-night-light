@@ -5,8 +5,14 @@ import Products from './Products/Products';
 import Reviews from './Reviews/Reviews';
 import GetInTouch from './GetInTouch/GetInTouch';
 import Footer from '../Shared/Footer/Footer';
+import useAuth from '../../hooks/useAuth';
+import { Spinner } from 'react-bootstrap';
 
 const Home = () => {
+    const { isLoading } = useAuth();
+    if (isLoading) {
+        return <div className="preloader"><Spinner animation="border" /></div>
+    };
     return (
         <>
             <Header></Header>

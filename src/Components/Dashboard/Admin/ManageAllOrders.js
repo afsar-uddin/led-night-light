@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import DashboardNav from '../DashboardNav';
 
 const ManageAllOrders = () => {
     const { user } = useAuth();
@@ -47,7 +46,7 @@ const ManageAllOrders = () => {
                             key={order._id}
                         ><Card>
                                 <div className="ordered-product">
-                                    <img src={order?.cover} />
+                                    <img src={order?.cover} alt={order?.title} />
                                     <h3>{order?.title}</h3>
                                 </div>
                                 <div className="btn-status">

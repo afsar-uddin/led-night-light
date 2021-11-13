@@ -92,7 +92,7 @@ const useFirebase = () => {
             setIsLoading(false)
         });
         return () => unsubscribed;
-    }, []);
+    }, [auth]);
 
     // ADMIN DATA LOAD
     useEffect(() => {

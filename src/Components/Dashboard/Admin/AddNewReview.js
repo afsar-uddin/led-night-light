@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import DashboardNav from '../DashboardNav';
 
 const AddNewReview = () => {
+    const { user } = useAuth()
 
     const reviewerName = useRef();
     const reviewerComment = useRef();
@@ -44,7 +45,7 @@ const AddNewReview = () => {
                     <Col>
                         <div className="add-new-product product-form">
                             <form onSubmit={handleAddReview} className="led-form">
-                                <input type="text" ref={reviewerName} placeholder="Your name" required />
+                                <input type="text" value={user.displayName} ref={reviewerName} placeholder="Your name" required />
                                 <input type="text" ref={reviewerRating} placeholder="Rating in numeric value" required />
                                 <textarea ref={reviewerComment} cols="20" rows="5" placeholder="Your comment" required></textarea>
                                 <input type="submit" value="Add Product" />

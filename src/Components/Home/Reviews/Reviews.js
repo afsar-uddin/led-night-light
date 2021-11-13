@@ -17,13 +17,13 @@ const Reviews = () => {
     return (
         <div className="reviews-wrapper">
             <div className="sec-title">
-                <h2>Review</h2>
+                <h2>Our Reviews</h2>
             </div>
             <Container>
                 <Row md={3} className="justify-content-center">
                     {
                         reviews.map(review => <Col className="single-review"
-                            key={review.id}
+                            key={review._id}
                         >
                             <Card>
                                 <h3>{review.name}</h3>

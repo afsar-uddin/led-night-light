@@ -5,11 +5,9 @@ import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
 import './Dashboard.css';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useParams,
     useRouteMatch
 } from "react-router-dom";
 import ManageProducts from './ManageProducts';
@@ -29,6 +27,8 @@ const DashboardNav = () => {
                 <Row>
                     <Col>
                         <h2>Dashboard of <span>{user?.displayName}</span></h2>
+                        <h4>Role: {admin ? 'Admin' : 'General user'}  </h4>
+                        <hr />
                     </Col>
                 </Row>
             </Container>

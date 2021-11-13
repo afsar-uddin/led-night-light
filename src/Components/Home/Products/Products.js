@@ -28,7 +28,7 @@ const Products = () => {
                     >
                         <Card>
                             <div className="product-pic">
-                                <img src={product.cover} />
+                                <img src={product.cover} alt={product.title} />
                             </div>
                             <div className="product-info">
                                 <h3>{product.title}</h3>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import DashboardNav from './DashboardNav';
 import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 
 const RivewsDashboard = () => {

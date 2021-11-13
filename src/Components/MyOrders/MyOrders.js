@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import './MyOrders.css'
-import { Link } from 'react-router-dom';
 import DashboardNav from '../Dashboard/DashboardNav';
 import Footer from '../Shared/Footer/Footer';
 
 const MyOrders = () => {
-    const { user, isLoading } = useAuth();
+    const { user } = useAuth();
     const [orders, setOrders] = useState();
 
     useEffect(() => {
@@ -50,7 +49,7 @@ const MyOrders = () => {
                             key={order._id}
                         ><Card>
                                 <div className="ordered-product">
-                                    <img src={order?.cover} />
+                                    <img src={order?.cover} alt={order?.title} />
                                     <h3>{order?.title}</h3>
                                 </div>
                                 <div className="btn-status">

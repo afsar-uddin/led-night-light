@@ -57,7 +57,8 @@
     margin-bottom: 30px;
     margin-top: 30px;
 }
-.update-btn button {
+.update-btn button,
+.manage-products button {
     width: 100%;
     display: block;
     margin-left: 0;
@@ -74,7 +75,12 @@
 .order-status-title {
     margin-bottom: 30px;
 }
-
+.manage-products button {
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 .status-wrapper {
     margin-bottom: 60px;
 }

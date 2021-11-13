@@ -27,3 +27,6 @@
 .led-header .navbar-nav a.active {
     color: #fff;
 }
+@media screen and (max-width: 974px) {
+    
+}

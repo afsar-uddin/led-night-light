@@ -8,7 +8,7 @@ import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, authError, isLoading, signInWithGoogle } = useAuth();
+    const { loginUser, authError, signInWithGoogle } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -37,6 +37,7 @@ const Login = () => {
                     <input type="password" onChange={handleOnChange} placeholder="Your password" name="password" required />
                     <input type="submit" className="led-btn" value="Login" />
                 </form>
+                {authError && <p className="authError">{authError === 'Firebase: Error (auth/wrong-password).' ? 'Wrong password, check again' : authError}</p>}
                 <p>Don't you have account? Register <Link className="link" to="/register">Here</Link></p>
                 <div className="google-login text-center">
                     <span>Or</span>

@@ -53,3 +53,7 @@
     background-color: #7e7632;
     color: #fff;
 }
+.authError {
+    color: red;
+    font-weight: 600;
+}

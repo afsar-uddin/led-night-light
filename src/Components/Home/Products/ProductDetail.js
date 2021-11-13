@@ -15,7 +15,7 @@ const ProductDetail = () => {
         fetch(`http://localhost:4000/products/${id}`)
             .then(res => res.json())
             .then(data => setProductDetail(data))
-    }, []);
+    }, [id]);
 
     // 
     const proceedToOrder = () => {
@@ -45,7 +45,7 @@ const ProductDetail = () => {
                     <Col md={8}>
                         <Card className="product-detail">
                             <h2>Product Information</h2>
-                            <img src={productDetail.cover} />
+                            <img src={productDetail.cover} alt={productDetail.title} />
                             <h3>{productDetail.title}</h3>
                             <p>{productDetail.dsc}</p>
                             {productDetail.price && <p>Price: $ {productDetail.price}</p>}

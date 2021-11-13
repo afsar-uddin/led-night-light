@@ -1,8 +1,15 @@
 import React from 'react';
 import Header from '../Shared/Header/Header';
 import Footer from '../../Components/Shared/Footer/Footer'
+import useAuth from '../../hooks/useAuth';
+import { Spinner } from 'react-bootstrap';
 
 const Contact = () => {
+    const { isLoading } = useAuth();
+
+    if (isLoading) {
+        return <div className="preloader"><Spinner animation="border" /></div>
+    };
     return (
         <div>
             <Header></Header>

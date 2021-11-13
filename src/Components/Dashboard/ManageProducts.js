@@ -44,7 +44,7 @@ const ManageProducts = () => {
                                 key={product._id}
                             ><Card>
                                     <div className="ordered-product">
-                                        <img src={product?.cover} />
+                                        <img src={product?.cover} alt={product?.title} />
                                         <h3>{product?.title}</h3>
                                     </div>
                                     <button onClick={() => handleRemoveProduct(product._id)}>Remove</button>

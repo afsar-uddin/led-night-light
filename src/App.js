@@ -14,12 +14,9 @@ import MyOrders from './Components/MyOrders/MyOrders';
 import AllProducts from './Components/AllProducts/AllProducts';
 import ManageAllOrders from './Components/Dashboard/Admin/ManageAllOrders';
 import UpdateStatus from './Components/Dashboard/Admin/UpdateStatus';
-import AddNewProduct from './Components/Dashboard/Admin/AddNewProduct';
 import AddNewReview from './Components/Dashboard/Admin/AddNewReview';
 import RivewsDashboard from './Components/Dashboard/RivewsDashboard';
 import Payment from './Components/Dashboard/Payment';
-import ManageProducts from './Components/Dashboard/ManageProducts';
-import MakeAdmin from './Components/Dashboard/Admin/MakeAdmin';
 
 function App() {
   return (
@@ -68,10 +65,6 @@ function App() {
               <ManageAllOrders></ManageAllOrders>
             </Route>
 
-            {/* <Route path="/manage-products">
-              <ManageProducts></ManageProducts>
-            </Route> */}
-
             <Route path="/reviews">
               <RivewsDashboard></RivewsDashboard>
             </Route>
@@ -80,17 +73,9 @@ function App() {
               <UpdateStatus></UpdateStatus>
             </Route>
 
-            {/* <Route path="/add-new-product">
-              <AddNewProduct></AddNewProduct>
-            </Route> */}
-
             <Route path="/add-new-review">
               <AddNewReview></AddNewReview>
             </Route>
-
-            {/* <Route path="/make-admin">
-              <MakeAdmin></MakeAdmin>
-            </Route> */}
 
             <Route path="*">
               <NotFound></NotFound>

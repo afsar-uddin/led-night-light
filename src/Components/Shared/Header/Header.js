@@ -19,7 +19,7 @@ const Header = () => {
                     <Nav
 
                         style={{ maxHeight: '100px' }}
-                        navbarScroll
+                    // navbarScroll
                     >
                         <NavLink activeClassName="active" exact to="/">Home</NavLink>
                         <NavLink activeClassName="active" exact to="/all-products">All Products</NavLink>
